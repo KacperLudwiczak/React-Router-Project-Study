@@ -14,7 +14,8 @@ export async function loader() {
   if (!response.ok) {
     //...
   } else {
-    const resData = await response.json();
-    return resData.events;
+    // const resData = await response.json();
+    const res = new Response("some data", { status: 201 });
+    return res;
   }
 }
